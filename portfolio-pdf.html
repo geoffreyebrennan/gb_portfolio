@@ -233,6 +233,7 @@
     .pdf-project {
       display: flex;
       align-items: center;
+      justify-content: flex-start;
       gap: 10px;
       padding: 10px 12px;
       border: 1px solid #d9d9d9;
@@ -243,6 +244,8 @@
       font-size: 11px;
       letter-spacing: 0.04em;
       text-transform: none;
+      text-align: left;
+      width: 100%;
     }
 
     .pdf-project img {
@@ -251,7 +254,22 @@
       object-fit: contain;
       flex-shrink: 0;
       display: block;
-      background: #fff;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+
+    .pdf-project-notes {
+      margin-top: 18px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .pdf-project-notes p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a1a1a;
     }
 
     .pdf-gallery {
@@ -517,7 +535,7 @@
       </section>
 
       <section class="pdf-section">
-        <div class="pdf-kicker">## A few more things I've built</div>
+        <div class="pdf-kicker">A few more things I've built</div>
         <div class="pdf-link-grid">
           <a class="pdf-project" href="https://geoffreyebrennan.github.io/product-company-simulator/" target="_blank" rel="noopener"><img src="images/game-logo.png" alt="Product Company Simulator">Product Company Simulator</a>
           <a class="pdf-project" href="https://geoffreyebrennan.github.io/release_planner/" target="_blank" rel="noopener"><img src="https://geoffreyebrennan.github.io/release_planner/images/Project_Workbench-small.png" alt="PM Project Workbench">PM Project Workbench</a>
@@ -526,6 +544,13 @@
           <a class="pdf-project" href="case-study-survey-wizard.html"><img src="images/survey_work.png" alt="Survey wizard">Case study: Survey wizard</a>
           <a class="pdf-project" href="case-study-billing_update.html"><img src="images/billing_screen.png" alt="Billing system update">Case study: Billing update</a>
           <a class="pdf-project" href="prior_work.html"><img src="images/GB-icon.png" alt="Prior work">Prior work</a>
+        </div>
+
+        <div class="pdf-copy pdf-project-notes">
+          <p><strong>Product Company Simulator:</strong> A strategy game built to demonstrate how product decisions, hiring, sales pressure and engineering trade-offs compound over time. It helps people understand the operational consequences of product leadership decisions in a fast-moving SaaS environment.</p>
+          <p><strong>PM Project Workbench:</strong> A planning and discovery tool inspired by my own product workflow. It structures early-stage initiative thinking so teams can challenge assumptions, test key questions and align on the work before large technical commitments are made.</p>
+          <p><strong>Vessel Generator:</strong> A generative 3D design prototype created to explore AI-assisted workflows in a design-heavy environment. It reflects my interest in taking concept work into usable, testable prototypes rather than static mockups.</p>
+          <p><strong>UX Lens Prototype:</strong> An AI-assisted UX evaluation concept exploring how product managers, designers and researchers can use structured analysis to surface quality issues and identify better opportunities for improvement.</p>
         </div>
       </section>
 
