@@ -184,6 +184,38 @@
       padding-bottom: 10px;
     }
 
+    .pdf-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 14px;
+    }
+
+    .pdf-gallery figure {
+      margin: 0;
+      border: 1px solid #d9d9d9;
+      background: #fafafa;
+      padding: 10px;
+    }
+
+    .pdf-gallery img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 240px;
+      object-fit: contain;
+      background: #fff;
+    }
+
+    .pdf-gallery figcaption {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #4a4a4a;
+      margin-top: 8px;
+    }
+
     .pdf-timeline {
       display: grid;
       gap: 10px;
@@ -377,6 +409,28 @@
             <p>By improving visibility, payment and invoice flows, and the underlying structure of the module, the rebuild made the product easier to use while creating a stronger base for future feature work.</p>
           </div>
         </article>
+      </section>
+
+      <section class="pdf-section">
+        <div class="pdf-kicker">Project visuals</div>
+        <div class="pdf-gallery">
+          <figure>
+            <img src="images/roles_and_permissions_whiteboard.png" alt="Roles and permissions whiteboard">
+            <figcaption>Roles &amp; permissions discovery</figcaption>
+          </figure>
+          <figure>
+            <img src="images/Perionewlook.PNG" alt="Perio charting design">
+            <figcaption>Perio charting redesign</figcaption>
+          </figure>
+          <figure>
+            <img src="images/Curve-Hero-Billing-System.png" alt="Billing system interface">
+            <figcaption>Billing module update</figcaption>
+          </figure>
+          <figure>
+            <img src="images/roles_and_permissions_screenshot3.png" alt="Roles management screenshot">
+            <figcaption>Granular access model</figcaption>
+          </figure>
+        </div>
       </section>
 
       <section class="pdf-section">
