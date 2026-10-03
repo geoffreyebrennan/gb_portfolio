@@ -150,6 +150,15 @@
       color: #111;
     }
 
+    .pdf-case h4 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #7a6640;
+      margin: 18px 0 8px;
+    }
+
     .pdf-meta {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -182,6 +191,36 @@
       color: #111;
       border-bottom: 1px solid #ddd;
       padding-bottom: 10px;
+    }
+
+    .pdf-highlight {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .pdf-highlight .box {
+      background: #f7f3ea;
+      border: 1px solid #d9d1ba;
+      padding: 14px 12px;
+    }
+
+    .pdf-highlight .value {
+      display: block;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 30px;
+      color: #111;
+      margin-bottom: 8px;
+    }
+
+    .pdf-highlight .label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #4a4a4a;
+      line-height: 1.5;
     }
 
     .pdf-gallery {
@@ -296,80 +335,47 @@
 
     <main>
       <section class="pdf-section">
-        <div class="pdf-kicker">Profile</div>
+        <div class="pdf-kicker">Portfolio overview</div>
         <div class="pdf-grid">
           <div class="pdf-copy">
-            <p>I'm Geoffrey Brennan, a product leader with more than 20 years' experience building products across AI, enterprise SaaS, manufacturing technology and industrial design. My career has moved from industrial design through UX leadership into product management, and each stage continues to shape how I work today.</p>
-            <p>I enjoy working at the edge of technical complexity and customer value. I'm comfortable discussing manufacturing constraints, design trade-offs and commercial strategy in the same conversation.</p>
+            <p>I'm Geoffrey Brennan, a product leader with more than 20 years of experience building software where the technical difficulty is real, the stakes are meaningful, and the product has to earn trust in real operating conditions. My path has moved from industrial design through UX leadership into product management, and each step has shaped how I think about product strategy, customer needs and delivery.</p>
+            <p>I work best in environments where users depend on the output, the workflow is complicated, and the right answer is not obvious. That has led me across AI manufacturing, healthcare SaaS, clinical tooling and enterprise product management — always in settings where the product has to be both technically credible and operationally useful.</p>
           </div>
           <div class="pdf-copy">
-            <p>My strength is turning difficult, engineering-heavy problems into products customers trust and adopt. I lead from discovery through roadmap design, delivery and go-to-market, while staying close enough to the work to help teams make the right decisions.</p>
-            <p>Whether it's AI in manufacturing, digital tooling for dental practices, or clinical workflows, I care most about building software that creates measurable value without hiding the complexity.</p>
+            <p>My advantage is the ability to move fluidly between customer pain, product direction and technical trade-offs. I have led projects from discovery and design through roadmap definition, stakeholder alignment and launch. I am comfortable in whiteboard sessions, customer interviews, roadmap reviews and engineering conversations because I understand that product leadership is not just deciding what to build — it is deciding what not to build and what the company can credibly deliver.</p>
+            <p>Below is a longer-form summary of the work that most clearly demonstrates how I operate across strategy, design and delivery.</p>
+          </div>
+        </div>
+
+        <div class="pdf-highlight">
+          <div class="box">
+            <span class="value">20+</span>
+            <span class="label">Years across product, design and engineering</span>
+          </div>
+          <div class="box">
+            <span class="value">3</span>
+            <span class="label">Flagship case studies in SaaS, clinical workflows and AI manufacturing</span>
+          </div>
+          <div class="box">
+            <span class="value">1000s</span>
+            <span class="label">Of customers and manufacturers served by products I helped shape</span>
           </div>
         </div>
       </section>
 
       <section class="pdf-section">
-        <div class="pdf-kicker">Snapshot</div>
-        <div class="pdf-stats">
-          <div class="pdf-stat"><strong>20+</strong><span>Years across product, design and engineering</span></div>
-          <div class="pdf-stat"><strong>4</strong><span>Industries from AI to healthcare and manufacturing</span></div>
-          <div class="pdf-stat"><strong>2</strong><span>Patents named inventor</span></div>
-          <div class="pdf-stat"><strong>1000s</strong><span>Practices and manufacturers served</span></div>
+        <div class="pdf-kicker">Why this work matters</div>
+        <div class="pdf-copy">
+          <p>Over the years, one theme has remained constant: the most valuable software is not necessarily the most clever, but the one that turns complexity into confidence. In dental practice management, that means reducing administrative friction and preventing avoidable mistakes. In clinical workflows, it means designing tools that fit the way clinicians actually work. In AI manufacturing, it means helping experts trust and adopt systems that can genuinely accelerate their work.</p>
+          <p>That is the lens I bring to product management: not just market needs, but trust, usability and operational reality. It is a practical, grounded way of leading product, and it is what has made my work repeatable across different domains.</p>
         </div>
       </section>
 
       <section class="pdf-section">
-        <div class="pdf-kicker">Selected work</div>
+        <div class="pdf-kicker">Case studies</div>
 
         <article class="pdf-case">
-          <h3>Teaching AI to think like a CNC programmer</h3>
-          <div class="pdf-meta">
-            <div><strong>Role</strong> Senior Product Manager</div>
-            <div><strong>Company</strong> CloudNC</div>
-            <div><strong>Focus</strong> AI Manufacturing Software</div>
-            <div><strong>Duration</strong> 2023 — Present</div>
-          </div>
-          <div class="pdf-copy">
-            <p>At CloudNC I lead product strategy for AI-powered manufacturing software that helps CNC programmers automate complex machining workflows without asking them to trust a black box. The problem is deeply technical and highly consequential: toolpaths, tolerances and machine behaviour all matter.</p>
-            <p>I work directly with machinists, engineers and AI researchers to understand where automation meaningfully reduces effort and where trust must remain explicit. It's product work shaped by real-world constraints.</p>
-          </div>
-        </article>
-
-        <article class="pdf-case">
-          <h3>Running five agile teams toward one coherent roadmap</h3>
-          <div class="pdf-meta">
-            <div><strong>Role</strong> Product Manager</div>
-            <div><strong>Company</strong> Curve Dental</div>
-            <div><strong>Focus</strong> Practice Management SaaS</div>
-            <div><strong>Duration</strong> 2019 — 2021</div>
-          </div>
-          <div class="pdf-copy">
-            <p>I owned product direction across five project teams, aligning roadmap, sequencing and metrics in a business-critical environment. The portfolio included permissions, billing and charting improvements shipped into software used by thousands of dental practices.</p>
-            <p>That work required a blend of discovery, prioritization and stakeholder trust: product decisions needed to be clear, measurable and defensible in a system where mistakes have immediate operational consequences.</p>
-          </div>
-        </article>
-
-        <article class="pdf-case">
-          <h3>Rebuilding perio charting from the clinic floor up</h3>
-          <div class="pdf-meta">
-            <div><strong>Role</strong> UX Team Lead</div>
-            <div><strong>Company</strong> Curve Dental</div>
-            <div><strong>Focus</strong> Clinical Workflow Redesign</div>
-            <div><strong>Duration</strong> 2017 — 2019</div>
-          </div>
-          <div class="pdf-copy">
-            <p>I led a redesign of perio charting, one of the most demanding clinical workflows in dental software, by validating against real workflows and building a more usable treatment flow for hygienists and dentists.</p>
-            <p>The result was a major lift in daily usage and a demonstration of the throughline between design rigor, product thinking and operational outcomes.</p>
-          </div>
-        </article>
-      </section>
-
-      <section class="pdf-section">
-        <div class="pdf-kicker">Detailed case studies</div>
-
-        <article class="pdf-case">
-          <h3>Roles and permissions overhaul</h3>
+          <h3>01 — Roles and permissions overhaul</h3>
           <div class="pdf-meta">
             <div><strong>Role</strong> UX Team Lead → Product Manager</div>
             <div><strong>Company</strong> Curve Dental</div>
@@ -377,13 +383,25 @@
             <div><strong>Outcome</strong> 9-month path to GA</div>
           </div>
           <div class="pdf-copy">
-            <p>I led the redesign of Curve Dental's legacy roles-and-permissions system, which was blocking sales deals and exposing the business to security and fraud risks. Working across research, UX, architecture and rollout, I built a more granular, practice-appropriate model for custom roles, multi-site visibility and user management.</p>
-            <p>The release moved the product from an outdated, rigid setup to a centralised administration model that scaled from small practices to large DSOs. It also showed how a careful rollout plan, documentation and validation discipline matter as much as the UI itself.</p>
+            <p>Curve Dental's existing roles-and-permissions system was a genuine business liability. It was rigid, difficult to use, hard to administer, and not flexible enough to support a wide range of practice structures. This created real problems for sales, customer success and internal security: deals stalled in demos, practices struggled to manage access correctly, and the system could not meaningfully separate duties in a way that protected the business from fraud and operational error.</p>
+            <p>As UX team lead, I began by digging into the underlying customer behaviour rather than jumping to a design answer. I conducted interviews and design validation work with practice administrators, owner-operators and stakeholders across engineering, sales and customer success. I also worked closely with architecture and engineering teams to understand what the backend could support and where constraints would shape the solution. That early alignment was critical because the problem was larger than interface design — it required a better understanding of how customers actually structured permissions and how the platform needed to scale.</p>
+            <p>The result was a more granular, centralised administration model built to support both small offices and multi-site DSOs. It included much stronger role definitions, better visibility into who had access and why, location-aware controls, and a user directory designed around real administrative needs rather than assumptions. I then carried the project through to product management, helping sequence rollout, align stakeholders and guide implementation toward general availability.</p>
+            <p>This work showed me something important: some of the highest-leverage product work is not flashy, but it is foundational. When access control and admin workflows are badly designed, they create friction throughout the business and limit revenue. By reworking the system properly, we removed a meaningful bottleneck in the product and improved the trust customers placed in the platform.</p>
+          </div>
+          <div class="pdf-gallery">
+            <figure>
+              <img src="images/roles_and_permissions_whiteboard.png" alt="Roles and permissions whiteboard">
+              <figcaption>Early discovery work</figcaption>
+            </figure>
+            <figure>
+              <img src="images/roles_and_permissions_screenshot3.png" alt="Roles management screenshot">
+              <figcaption>Granular access model</figcaption>
+            </figure>
           </div>
         </article>
 
         <article class="pdf-case">
-          <h3>Perio charting rebuild</h3>
+          <h3>02 — Perio charting rebuild</h3>
           <div class="pdf-meta">
             <div><strong>Role</strong> UX Team Lead / Lead Designer</div>
             <div><strong>Company</strong> Curve Dental</div>
@@ -391,13 +409,25 @@
             <div><strong>Outcome</strong> 10× usage increase</div>
           </div>
           <div class="pdf-copy">
-            <p>Perio charting had been built in Flash, was technically obsolete, and so frustrating to use that many hygienists defaulted to paper records. I led the redesign from research through to general availability, uncovering the real variation in how clinicians examined patients and building a system that supported multiple workflows instead of forcing one standard.</p>
-            <p>We built an SVG-based graphical model, a tabular view, keyboard-first interactions and configurable exam flows. The result was a production tool clinicians actually used and one that became a major differentiator in the product.</p>
+            <p>Periodontal charting is a clinical workflow that is both extremely common and extremely demanding. Hygienists gather a large amount of data quickly, often under time pressure, and the workflow has to support multiple individual preferences without compromising speed or accuracy. The existing module in Curve Dental was built in Flash and had become technically obsolete. On top of that, it was confusing enough that users often reverted to paper records instead of entering data directly into the system.</p>
+            <p>The challenge was not simply to recreate an old feature in a new stack. The real task was to rebuild a workflow that actually matched how clinicians work. I led this effort as design lead, working directly with dental professionals to understand the variation in exam practices, the sequence of charting, and the type of data that mattered most. That process surfaced a critical insight: there was no single correct pathway for periodontal exams. Hygienists disagreed on start conditions, order of measurement and which metrics mattered most, and the product had to accommodate those differences rather than forcing a single workflow onto the entire user base.</p>
+            <p>I designed a solution that paired anatomical accuracy with flexibility: a graphical mouth view for orientation, a tabular data-entry model for measurement, keyboard-first interactions for speed, and configurable exam behaviour that could adapt to different practice styles. We used SVG-based graphics and prototype testing to validate both the operational logic and the visual structure, then refined the product through alpha and beta feedback before general availability.</p>
+            <p>The result was a clear increase in product usage and a meaningful improvement in perceived quality. What had once been a feature users avoided became one of the product's defining strengths. That experience reinforced my belief that the strongest product decisions come from close observation of real users and a willingness to design for variability rather than the mythical average customer.</p>
+          </div>
+          <div class="pdf-gallery">
+            <figure>
+              <img src="images/Perionewlook.PNG" alt="Perio charting design">
+              <figcaption>Clinical UX redesign</figcaption>
+            </figure>
+            <figure>
+              <img src="images/Perio graphical mode (1).PNG" alt="Graphical mode perio charting">
+              <figcaption>Graphical exam flow</figcaption>
+            </figure>
           </div>
         </article>
 
         <article class="pdf-case">
-          <h3>Billing system update</h3>
+          <h3>03 — Billing system update</h3>
           <div class="pdf-meta">
             <div><strong>Role</strong> Lead Designer / Product Manager</div>
             <div><strong>Company</strong> Curve Dental</div>
@@ -405,51 +435,40 @@
             <div><strong>Outcome</strong> Faster, clearer and more scalable billing</div>
           </div>
           <div class="pdf-copy">
-            <p>The billing module overhaul focused on preserving the familiar logic of the legacy experience while making the most important actions more visible and less error-prone. I shaped the redesign around task isolation, smarter defaults, clearer filtering and a cleaner ledger experience for busy practice teams.</p>
-            <p>By improving visibility, payment and invoice flows, and the underlying structure of the module, the rebuild made the product easier to use while creating a stronger base for future feature work.</p>
+            <p>Billing is one of those product areas that does not get the glamour of new features, but it absolutely determines whether a platform feels trustworthy to users. The billing module was being rebuilt to improve usability, performance and scalability while keeping the fundamental workflows familiar enough for customers to adopt without confusion. This is exactly the kind of project where design quality and product discipline matter: a small improvement in visibility or logic can reduce support issues, accelerate daily accounting tasks and cut accidental data-entry errors.</p>
+            <p>I was involved from concept through delivery, helping define the user experience and then carrying product responsibility through the implementation and release stages. The redesign focused on making repeated actions more visible, separating task flows more cleanly, and making the ledger easier to scan. It included improved filtering, smarter defaults, clearer invoice and payment flows, and stronger visibility into account status. These are not glamorous changes, but they are the sort of foundational updates that make complex software feel dependable.</p>
+            <p>What made the project successful was keeping the familiar shape of the workflow while creating clearer and more focused interactions. That balance matters: large improvements in backend capability and UI clarity should not come at the cost of forcing users to relearn the entire process. The end result was a billing experience that felt faster, more robust and better aligned with practice workflows, while also giving the product a stronger foundation for future feature work.</p>
+          </div>
+          <div class="pdf-gallery">
+            <figure>
+              <img src="images/Curve-Hero-Billing-System.png" alt="Billing system interface">
+              <figcaption>Modern billing UI</figcaption>
+            </figure>
+            <figure>
+              <img src="images/billing_whiteboard.png" alt="Billing design whiteboard">
+              <figcaption>Workflow definition</figcaption>
+            </figure>
           </div>
         </article>
       </section>
 
       <section class="pdf-section">
-        <div class="pdf-kicker">Project visuals</div>
-        <div class="pdf-gallery">
-          <figure>
-            <img src="images/roles_and_permissions_whiteboard.png" alt="Roles and permissions whiteboard">
-            <figcaption>Roles &amp; permissions discovery</figcaption>
-          </figure>
-          <figure>
-            <img src="images/Perionewlook.PNG" alt="Perio charting design">
-            <figcaption>Perio charting redesign</figcaption>
-          </figure>
-          <figure>
-            <img src="images/Curve-Hero-Billing-System.png" alt="Billing system interface">
-            <figcaption>Billing module update</figcaption>
-          </figure>
-          <figure>
-            <img src="images/roles_and_permissions_screenshot3.png" alt="Roles management screenshot">
-            <figcaption>Granular access model</figcaption>
-          </figure>
+        <div class="pdf-kicker">Product leadership approach</div>
+        <div class="pdf-copy">
+          <p>The common thread across these projects is not just UX or strategy in isolation — it is disciplined product leadership. I work by starting with the real constraint, validating assumptions with users and stakeholders, then translating the underlying need into a product decision the team can execute confidently. I care about roadmap sequencing, trust, rollout quality and measurable outcomes, not just the appearance of a feature.</p>
         </div>
-      </section>
-
-      <section class="pdf-section">
-        <div class="pdf-kicker">Expertise</div>
-        <ul class="pdf-list">
-          <li>Product strategy</li>
-          <li>Roadmapping</li>
-          <li>AI product development</li>
-          <li>Customer discovery</li>
-          <li>Stakeholder leadership</li>
-          <li>Agile delivery</li>
-          <li>Manufacturing software</li>
-          <li>Healthcare SaaS</li>
-          <li>Industrial design</li>
+        <ul class="pdf-list" style="margin-top: 18px;">
+          <li>Discovery before definition</li>
+          <li>Research that changes the plan</li>
+          <li>Roadmaps built on real constraints</li>
+          <li>Clear decisions, not noisy debate</li>
+          <li>Designs that are operationally realistic</li>
+          <li>Delivery that protects trust</li>
         </ul>
       </section>
 
       <section class="pdf-section">
-        <div class="pdf-kicker">Career &amp; education</div>
+        <div class="pdf-kicker">Career summary</div>
         <div class="pdf-timeline">
           <div class="pdf-timeline-row">
             <div class="date">2023 — Present</div>
