@@ -223,6 +223,37 @@
       line-height: 1.5;
     }
 
+    .pdf-link-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 18px;
+      margin-top: 16px;
+    }
+
+    .pdf-project {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid #d9d9d9;
+      background: #fafafa;
+      color: #101010;
+      text-decoration: none;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      text-transform: none;
+    }
+
+    .pdf-project img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      flex-shrink: 0;
+      display: block;
+      background: #fff;
+    }
+
     .pdf-gallery {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -450,6 +481,52 @@
             </figure>
           </div>
         </article>
+
+        <article class="pdf-case">
+          <h3>04 — Teaching AI to think like a CNC programmer</h3>
+          <div class="pdf-meta">
+            <div><strong>Role</strong> Senior Product Manager</div>
+            <div><strong>Company</strong> CloudNC</div>
+            <div><strong>Focus</strong> AI Manufacturing Software</div>
+            <div><strong>Outcome</strong> Production AI product for CNC workflows</div>
+          </div>
+          <div class="pdf-copy">
+            <p>CloudNC is the clearest example of the work I do at the intersection of product strategy, technical depth and trust-building. The challenge was not simply to add AI to a workflow; it was to help CNC programmers adopt a system that could generate pragmatic machining strategies in a domain where the consequences of a bad decision are immediate and expensive. Every recommendation has to stand up to the realities of machine physics, tolerances and production constraints.</p>
+            <p>I work directly with machinists, engineers, customers and AI researchers to define what value the product can credibly generate and how that value should surface inside the real production workflow. That means focusing on the points where automation reduces repetitive cognitive load without asking users to surrender judgment. It also means building system confidence through transparency, clear constraints and iterative feedback loops.</p>
+            <p>The result is a production-grade AI product that helps users move faster without compromising technical credibility. It is a strong example of the product leadership mode I use across domains: understand the underlying constraint, validate customer pain, translate that into a defendable roadmap, and keep the technical depth close to the product decision.</p>
+          </div>
+          <div class="pdf-gallery">
+            <figure>
+              <img src="images/CAM-Assist-001.png" alt="CloudNC AI manufacturing view">
+              <figcaption>AI-assisted programming</figcaption>
+            </figure>
+            <figure>
+              <img src="images/CAM-Assist-002.png" alt="CloudNC toolpath strategy">
+              <figcaption>Decision support for machining</figcaption>
+            </figure>
+            <figure>
+              <img src="images/CAM-Assist-003.png" alt="CloudNC operational interface">
+              <figcaption>Validation in workflow context</figcaption>
+            </figure>
+            <figure>
+              <img src="images/CloudNC-logo-1000x919.png" alt="CloudNC logo">
+              <figcaption>CloudNC platform</figcaption>
+            </figure>
+          </div>
+        </article>
+      </section>
+
+      <section class="pdf-section">
+        <div class="pdf-kicker">## A few more things I've built</div>
+        <div class="pdf-link-grid">
+          <a class="pdf-project" href="https://geoffreyebrennan.github.io/product-company-simulator/" target="_blank" rel="noopener"><img src="images/game-logo.png" alt="Product Company Simulator">Product Company Simulator</a>
+          <a class="pdf-project" href="https://geoffreyebrennan.github.io/release_planner/" target="_blank" rel="noopener"><img src="https://geoffreyebrennan.github.io/release_planner/images/Project_Workbench-small.png" alt="PM Project Workbench">PM Project Workbench</a>
+          <a class="pdf-project" href="vessel-generator.html"><img src="images/vessel-generator-icon.png" alt="Vessel Generator">Vessel Generator</a>
+          <a class="pdf-project" href="https://geoffreyebrennan.github.io/UXLensAIPrototype/" target="_blank" rel="noopener"><img src="images/UXLens-icon.png" alt="UX Lens Prototype">UX Lens Prototype</a>
+          <a class="pdf-project" href="case-study-survey-wizard.html"><img src="images/survey_work.png" alt="Survey wizard">Case study: Survey wizard</a>
+          <a class="pdf-project" href="case-study-billing_update.html"><img src="images/billing_screen.png" alt="Billing system update">Case study: Billing update</a>
+          <a class="pdf-project" href="prior_work.html"><img src="images/GB-icon.png" alt="Prior work">Prior work</a>
+        </div>
       </section>
 
       <section class="pdf-section">
