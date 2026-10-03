@@ -565,6 +565,152 @@ h3.case-title {
   .timeline-row .t-loc { text-align: left; }
 }
 
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+
+  html {
+    background: #fff;
+    color: #1a1a1a;
+  }
+
+  body {
+    background: #fff !important;
+    color: #1a1a1a !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  header,
+  .nav-links,
+  .nav-cta,
+  .reveal,
+  iframe,
+  .pdf-link,
+  a[href^="#"],
+  .other-work-links a[target="_blank"],
+  .case-link {
+    display: none !important;
+  }
+
+  .hero,
+  section,
+  footer,
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .wrap,
+  .hero,
+  .case,
+  .specsheet,
+  .timeline-row,
+  .expertise-grid,
+  .titleblock,
+  .profile-grid {
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  .titleblock,
+  .specsheet {
+    border-color: #1a1a1a !important;
+  }
+
+  .titleblock div,
+  .spec,
+  .timeline-row,
+  .edu-row,
+  .expertise-col li,
+  .case {
+    border-color: #1a1a1a !important;
+  }
+
+  .hero-headline,
+  h1,
+  h2,
+  h3,
+  h4,
+  .hero-name,
+  .hero-title,
+  .case-title,
+  .t-role,
+  .t-company,
+  .t-date,
+  .tb-value,
+  .tb-label,
+  .section-num,
+  .section-title,
+  .spec-value,
+  .footer-title,
+  .fc-label {
+    color: #111 !important;
+  }
+
+  .hero-eyebrow,
+  .section-num,
+  .case-tag,
+  .tb-label,
+  .spec-label,
+  .fc-label,
+  .t-date,
+  .t-loc,
+  .section-note,
+  .nav-mark {
+    color: #555 !important;
+  }
+
+  .case-copy p,
+  .profile-grid p,
+  .expertise-col li,
+  .timeline-row .t-company,
+  .edu-row .t-company,
+  .footer-contacts a,
+  .footer-contacts span,
+  .hero-sub,
+  body {
+    color: #1f1f1f !important;
+  }
+
+  .case {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    padding: 18px 0 !important;
+  }
+
+  .case-copy,
+  .profile-grid,
+  .expertise-grid,
+  .timeline-row,
+  .footer-contacts {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .wrap {
+    padding: 0 !important;
+  }
+
+  .hero {
+    padding-top: 16px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .footer-contacts {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .footer-contacts img {
+    width: 42px;
+    height: 42px;
+  }
+}
+
 .edu-row {
   display: grid;
   grid-template-columns: 140px 1fr;
@@ -589,6 +735,22 @@ footer {
 }
 
 footer .wrap { max-width: 1160px; }
+
+.pdf-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 10px 16px;
+}
+
 h2.footer-title {
   font-family: var(--font-display);
   font-weight: 300;

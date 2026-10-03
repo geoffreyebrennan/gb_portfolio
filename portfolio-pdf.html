@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geoffrey Brennan — PDF Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="images/GB-icon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body.pdf-body {
+      background: #ffffff;
+      color: #171717;
+    }
+
+    .pdf-shell {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 28px 60px;
+    }
+
+    .pdf-header {
+      border-bottom: 2px solid #171717;
+      padding-bottom: 18px;
+      margin-bottom: 24px;
+    }
+
+    .pdf-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #171717;
+    }
+
+    .pdf-brand .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      display: inline-block;
+      background: #d7b257;
+    }
+
+    .pdf-person {
+      margin-top: 18px;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: #111111;
+    }
+
+    .pdf-role {
+      margin-top: 8px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #4b4b4b;
+    }
+
+    .pdf-section {
+      padding: 18px 0;
+      border-top: 1px solid #d7d7d7;
+    }
+
+    .pdf-section:first-of-type {
+      border-top: none;
+    }
+
+    .pdf-kicker {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #7a6640;
+      margin-bottom: 12px;
+    }
+
+    .pdf-copy {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #1a1a1a;
+    }
+
+    .pdf-copy p + p {
+      margin-top: 14px;
+    }
+
+    .pdf-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .pdf-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .pdf-stat {
+      border-left: 1px solid #dadada;
+      padding-left: 14px;
+    }
+
+    .pdf-stat:first-child {
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .pdf-stat strong {
+      display: block;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 28px;
+      font-weight: 500;
+      color: #111;
+      margin-bottom: 8px;
+    }
+
+    .pdf-stat span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #3d3d3d;
+      line-height: 1.5;
+    }
+
+    .pdf-case {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #d7d7d7;
+    }
+
+    .pdf-case h3 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 500;
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .pdf-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+      margin: 12px 0 18px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #363636;
+    }
+
+    .pdf-meta strong {
+      color: #111;
+      font-weight: 600;
+    }
+
+    .pdf-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px 18px;
+    }
+
+    .pdf-list li {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 18px;
+      color: #111;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .pdf-timeline {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .pdf-timeline-row {
+      display: grid;
+      grid-template-columns: 120px 1fr 140px 80px;
+      gap: 16px;
+      padding-top: 10px;
+      border-top: 1px solid #d9d9d9;
+      font-size: 12px;
+    }
+
+    .pdf-timeline-row .date,
+    .pdf-timeline-row .loc {
+      font-family: 'IBM Plex Mono', monospace;
+      color: #4c4c4c;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .pdf-timeline-row .role {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 18px;
+      color: #111;
+    }
+
+    .pdf-timeline-row .company {
+      font-family: 'Inter', sans-serif;
+      color: #303030;
+    }
+
+    @media (max-width: 720px) {
+      .pdf-grid,
+      .pdf-stats,
+      .pdf-list,
+      .pdf-timeline-row {
+        grid-template-columns: 1fr;
+      }
+
+      .pdf-timeline-row {
+        gap: 4px;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 12mm;
+      }
+
+      body.pdf-body {
+        background: #fff !important;
+        color: #111 !important;
+      }
+
+      .pdf-shell {
+        padding: 0 !important;
+        max-width: none !important;
+      }
+
+      a {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="pdf-body">
+  <div class="pdf-shell">
+    <header class="pdf-header">
+      <div class="pdf-brand"><span class="dot"></span>Geoffrey Brennan</div>
+      <div class="pdf-person">Product leadership built for complex systems and real-world trust.</div>
+      <div class="pdf-role">Senior Product Leader • AI &amp; Enterprise SaaS • London, UK</div>
+    </header>
+
+    <main>
+      <section class="pdf-section">
+        <div class="pdf-kicker">Profile</div>
+        <div class="pdf-grid">
+          <div class="pdf-copy">
+            <p>I'm Geoffrey Brennan, a product leader with more than 20 years' experience building products across AI, enterprise SaaS, manufacturing technology and industrial design. My career has moved from industrial design through UX leadership into product management, and each stage continues to shape how I work today.</p>
+            <p>I enjoy working at the edge of technical complexity and customer value. I'm comfortable discussing manufacturing constraints, design trade-offs and commercial strategy in the same conversation.</p>
+          </div>
+          <div class="pdf-copy">
+            <p>My strength is turning difficult, engineering-heavy problems into products customers trust and adopt. I lead from discovery through roadmap design, delivery and go-to-market, while staying close enough to the work to help teams make the right decisions.</p>
+            <p>Whether it's AI in manufacturing, digital tooling for dental practices, or clinical workflows, I care most about building software that creates measurable value without hiding the complexity.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="pdf-section">
+        <div class="pdf-kicker">Snapshot</div>
+        <div class="pdf-stats">
+          <div class="pdf-stat"><strong>20+</strong><span>Years across product, design and engineering</span></div>
+          <div class="pdf-stat"><strong>4</strong><span>Industries from AI to healthcare and manufacturing</span></div>
+          <div class="pdf-stat"><strong>2</strong><span>Patents named inventor</span></div>
+          <div class="pdf-stat"><strong>1000s</strong><span>Practices and manufacturers served</span></div>
+        </div>
+      </section>
+
+      <section class="pdf-section">
+        <div class="pdf-kicker">Selected work</div>
+
+        <article class="pdf-case">
+          <h3>Teaching AI to think like a CNC programmer</h3>
+          <div class="pdf-meta">
+            <div><strong>Role</strong> Senior Product Manager</div>
+            <div><strong>Company</strong> CloudNC</div>
+            <div><strong>Focus</strong> AI Manufacturing Software</div>
+            <div><strong>Duration</strong> 2023 — Present</div>
+          </div>
+          <div class="pdf-copy">
+            <p>At CloudNC I lead product strategy for AI-powered manufacturing software that helps CNC programmers automate complex machining workflows without asking them to trust a black box. The problem is deeply technical and highly consequential: toolpaths, tolerances and machine behaviour all matter.</p>
+            <p>I work directly with machinists, engineers and AI researchers to understand where automation meaningfully reduces effort and where trust must remain explicit. It's product work shaped by real-world constraints.</p>
+          </div>
+        </article>
+
+        <article class="pdf-case">
+          <h3>Running five agile teams toward one coherent roadmap</h3>
+          <div class="pdf-meta">
+            <div><strong>Role</strong> Product Manager</div>
+            <div><strong>Company</strong> Curve Dental</div>
+            <div><strong>Focus</strong> Practice Management SaaS</div>
+            <div><strong>Duration</strong> 2019 — 2021</div>
+          </div>
+          <div class="pdf-copy">
+            <p>I owned product direction across five project teams, aligning roadmap, sequencing and metrics in a business-critical environment. The portfolio included permissions, billing and charting improvements shipped into software used by thousands of dental practices.</p>
+            <p>That work required a blend of discovery, prioritization and stakeholder trust: product decisions needed to be clear, measurable and defensible in a system where mistakes have immediate operational consequences.</p>
+          </div>
+        </article>
+
+        <article class="pdf-case">
+          <h3>Rebuilding perio charting from the clinic floor up</h3>
+          <div class="pdf-meta">
+            <div><strong>Role</strong> UX Team Lead</div>
+            <div><strong>Company</strong> Curve Dental</div>
+            <div><strong>Focus</strong> Clinical Workflow Redesign</div>
+            <div><strong>Duration</strong> 2017 — 2019</div>
+          </div>
+          <div class="pdf-copy">
+            <p>I led a redesign of perio charting, one of the most demanding clinical workflows in dental software, by validating against real workflows and building a more usable treatment flow for hygienists and dentists.</p>
+            <p>The result was a major lift in daily usage and a demonstration of the throughline between design rigor, product thinking and operational outcomes.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="pdf-section">
+        <div class="pdf-kicker">Expertise</div>
+        <ul class="pdf-list">
+          <li>Product strategy</li>
+          <li>Roadmapping</li>
+          <li>AI product development</li>
+          <li>Customer discovery</li>
+          <li>Stakeholder leadership</li>
+          <li>Agile delivery</li>
+          <li>Manufacturing software</li>
+          <li>Healthcare SaaS</li>
+          <li>Industrial design</li>
+        </ul>
+      </section>
+
+      <section class="pdf-section">
+        <div class="pdf-kicker">Career &amp; education</div>
+        <div class="pdf-timeline">
+          <div class="pdf-timeline-row">
+            <div class="date">2023 — Present</div>
+            <div class="role">Senior Product Manager</div>
+            <div class="company">CloudNC</div>
+            <div class="loc">London</div>
+          </div>
+          <div class="pdf-timeline-row">
+            <div class="date">2021 — 2023</div>
+            <div class="role">Senior Product Designer</div>
+            <div class="company">Qlearsite</div>
+            <div class="loc">London</div>
+          </div>
+          <div class="pdf-timeline-row">
+            <div class="date">2019 — 2021</div>
+            <div class="role">Product Manager</div>
+            <div class="company">Curve Dental</div>
+            <div class="loc">Calgary</div>
+          </div>
+          <div class="pdf-timeline-row">
+            <div class="date">2017 — 2019</div>
+            <div class="role">UX Team Lead</div>
+            <div class="company">Curve Dental</div>
+            <div class="loc">Calgary</div>
+          </div>
+          <div class="pdf-timeline-row">
+            <div class="date">1996 — 2001</div>
+            <div class="role">MEDes, Industrial Design</div>
+            <div class="company">University of Calgary</div>
+            <div class="loc">—</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pdf-section">
+        <div class="pdf-kicker">Contact</div>
+        <div class="pdf-copy">
+          <p>Email: geoffrey.e.brennan@gmail.com<br>LinkedIn: linkedin.com/in/geoffreybrennan<br>Location: London, UK</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
