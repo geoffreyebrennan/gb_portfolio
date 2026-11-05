@@ -1107,3 +1107,113 @@ h2.footer-title em { font-style: italic; color: var(--accent); }
   .case-study-page .hero { padding-top: 64px; padding-bottom: 40px; }
   .case-study-page .hero-dek { font-size: 17px; }
 }
+
+.decision-page .practice-list {
+  max-width: 760px;
+  margin: 0 0 24px;
+  padding-left: 24px;
+}
+
+.decision-page .practice-list li {
+  padding: 8px 0 8px 4px;
+}
+
+.decision-page .practice-list strong {
+  color: var(--accent);
+}
+
+.decision-page .numbered-list {
+  padding-left: 28px;
+}
+
+.decision-page .table-scroll {
+  max-width: 880px;
+  overflow-x: auto;
+  margin: 24px 0 40px;
+}
+
+.decision-page .practice-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.decision-page .practice-table th,
+.decision-page .practice-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+.decision-page .practice-table thead th {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.decision-page .practice-table tbody th {
+  min-width: 150px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.decision-page .practice-table td {
+  min-width: 230px;
+  font-size: 15px;
+}
+
+.decision-page .story-example {
+  max-width: 760px;
+  padding: 20px 24px;
+  border-left: 2px solid var(--accent);
+  background: var(--header);
+}
+
+.decision-page .criteria-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.decision-page .criteria-list li {
+  border-bottom: 1px solid var(--rule);
+}
+
+.decision-page footer {
+  background: var(--header);
+  color: var(--paper);
+  padding: 48px 0;
+}
+
+.decision-page footer .wrap {
+  max-width: 880px;
+}
+
+.decision-page .footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.decision-page .footer-links a {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent-soft);
+  text-decoration: none;
+}
+
+.decision-page .footer-links a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 700px) {
+  .decision-page .practice-table th,
+  .decision-page .practice-table td {
+    padding: 12px;
+  }
+}

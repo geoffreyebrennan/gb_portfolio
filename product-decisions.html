@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Decisions &amp; Requirements — Geoffrey Brennan</title>
+<link rel="icon" type="image/x-icon" href="images/GB-icon.ico">
+<meta name="description" content="How Geoffrey Brennan makes product decisions, captures requirements and leads delivery, from discovery through release and learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="case-study-page decision-page">
+<header>
+  <nav class="nav">
+    <a class="nav-mark" href="index.html"><span class="dot"></span>Geoffrey Brennan</a>
+    <a class="back-link" href="index.html#other-work">← Back to portfolio</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-eyebrow">Product Practice</div>
+    <h1 class="hero-title">How I make product decisions and capture requirements</h1>
+    <p class="hero-dek">This is how I work, from a messy problem to a decision the team trusts and requirements engineers can build from. It draws on product work at CloudNC and Curve Dental, and on a design background that taught me to start with the person using the product.</p>
+  </section>
+
+  <div class="wrap">
+    <div class="titleblock">
+      <div><span class="tb-label">Author</span><span class="tb-value">Geoffrey Brennan</span></div>
+      <div><span class="tb-label">Role</span><span class="tb-value">Senior Product Manager</span></div>
+      <div><span class="tb-label">Focus</span><span class="tb-value">Decisions &amp; delivery</span></div>
+      <div><span class="tb-label">Approach</span><span class="tb-value">Evidence to outcomes</span></div>
+    </div>
+  </div>
+
+  <section class="section-rule">
+    <div class="wrap">
+      <span class="eyebrow">01 — Principles</span>
+      <h2 class="section-title">The principles behind the work</h2>
+      <ul class="practice-list">
+        <li><strong>Outcome first.</strong> Start from the outcome we want to move, not the feature someone asked for.</li>
+        <li><strong>Evidence over opinion.</strong> Use more than one source, and say how strong the evidence is.</li>
+        <li><strong>Match effort to reversibility.</strong> Decide reversible things quickly. Slow down for decisions that are hard to undo.</li>
+        <li><strong>Requirements are shared understanding.</strong> A story is a way for the team to agree, not an instruction handed over.</li>
+        <li><strong>Never let the product mislead.</strong> If data is missing, show it as missing, never as zero. Users act on what we show them.</li>
+        <li><strong>Ship safely, then learn.</strong> Release the smallest safe slice, learn from real use, then extend.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-rule">
+    <div class="wrap">
+      <span class="eyebrow">02 — Product decisions</span>
+      <h2 class="section-title">How I make product decisions</h2>
+      <ol class="practice-list numbered-list">
+        <li><strong>Frame the decision.</strong> What outcome are we trying to move? Who is affected? What happens if we do nothing? When do we need to decide? I also classify the decision: reversible (decide fast, small group) or hard to reverse (more evidence, wider review).</li>
+        <li><strong>Gather evidence from several sources.</strong> Behavioural data (what users actually do), qualitative research (interviews, recorded customer calls), operational signals (error monitoring, support tickets) and commercial signals (pipeline, churn reasons). I note where sources agree and where they conflict.</li>
+        <li><strong>Generate options.</strong> At least two real options, including doing less or doing nothing.</li>
+        <li><strong>Weigh the options against four lenses.</strong> Customer value, technical feasibility, commercial opportunity and product risk. For close calls I use a simple score such as RICE or cost of delay, but the score informs the decision rather than making it.</li>
+        <li><strong>Decide, record and communicate.</strong> A short decision note: context, options, decision, reasons, what would change our mind, owner and date. I share it with engineering, design, sales and customer success so everyone hears the same reasoning.</li>
+        <li><strong>Set the signal and revisit.</strong> Before we build, agree the measure of success and a date to review it.</li>
+      </ol>
+
+      <h3 class="sub-title">Worked example: CAM Assist 2.0 at CloudNC</h3>
+      <div class="table-scroll">
+        <table class="practice-table">
+          <thead><tr><th scope="col">Step</th><th scope="col">What happened</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Frame</th><td>Adoption of our AI toolpaths was limited. The working assumption in the team was that users needed better documentation.</td></tr>
+            <tr><th scope="row">Evidence</th><td>I compared toolpaths generated with those actually sent to the CAM system, and reviewed recorded calls, Sentry data and customer interviews. Users were generating AI toolpaths but hesitating to trust them.</td></tr>
+            <tr><th scope="row">Hypothesis</th><td>Expert machinists would not commit output they could not inspect, because a plausible-looking but wrong toolpath can scrap a part.</td></tr>
+            <tr><th scope="row">Options</th><td>Improve documentation and onboarding, or redesign the product experience around visibility and user control.</td></tr>
+            <tr><th scope="row">Decision</th><td>Redesign: interactive 3D visualisation, real-time machinability feedback and inspectable workflow stages, so users could understand and challenge AI decisions before production.</td></tr>
+            <tr><th scope="row">Outcome</th><td>Contributed to a 15% churn reduction on the previous quarter.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="sub-title">Decision note template</h3>
+      <div class="table-scroll">
+        <table class="practice-table">
+          <thead><tr><th scope="col">Section</th><th scope="col">Content</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Decision</th><td>One sentence</td></tr>
+            <tr><th scope="row">Context</th><td>Problem, outcome we want, who is affected</td></tr>
+            <tr><th scope="row">Options considered</th><td>Two or more, including doing less</td></tr>
+            <tr><th scope="row">Evidence and confidence</th><td>Sources, what they show, how sure we are</td></tr>
+            <tr><th scope="row">Decision and reasons</th><td>What we chose and why</td></tr>
+            <tr><th scope="row">What would change our mind</th><td>The signal that would make us revisit</td></tr>
+            <tr><th scope="row">Owner, date, review date</th><td>Who owns it and when we check</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-rule">
+    <div class="wrap">
+      <span class="eyebrow">03 — Requirements</span>
+      <h2 class="section-title">How I capture and write requirements</h2>
+      <ol class="practice-list numbered-list">
+        <li><strong>Discover.</strong> I run workshops with users and stakeholders, observe the work where I can, and map the journey. I capture business rules, edge cases, constraints and the language users actually use.</li>
+        <li><strong>Write the problem statement.</strong> One paragraph on the problem, a measurable outcome, and explicit non-goals.</li>
+        <li><strong>Structure the work.</strong> Epics break into features, and features into stories small enough to finish in a sprint. Each story states the user, the need and the value.</li>
+        <li><strong>Make it testable.</strong> Acceptance criteria in Given / When / Then form, covering the happy path, edge cases and error states. I add non-functional needs (performance, accessibility, security, permissions, audit), data rules (source of truth, missing versus zero, freshness, rounding) and the analytics events we need.</li>
+        <li><strong>Agree the technical contract.</strong> Before refinement I sit with the tech lead to agree the interface: what goes in, what comes out, validation rules, error responses, who owns which state, what happens on a timeout or partial failure, and how we stay backwards compatible. We write down each trade-off and who made the call.</li>
+        <li><strong>Check readiness and manage change.</strong> Stories meet the Definition of Ready before a sprint and the Definition of Done before release. Changes are logged, and risks or delays are raised as soon as I see them.</li>
+      </ol>
+
+      <h3 class="sub-title">Definition of Ready and Definition of Done</h3>
+      <div class="table-scroll">
+        <table class="practice-table">
+          <thead><tr><th scope="col">Definition of Ready</th><th scope="col">Definition of Done</th></tr></thead>
+          <tbody>
+            <tr><td>Clear user, need and value</td><td>All acceptance criteria pass</td></tr>
+            <tr><td>Acceptance criteria agreed with engineering and design</td><td>Edge cases and error states tested</td></tr>
+            <tr><td>Edge cases and error states listed</td><td>Accessibility checked</td></tr>
+            <tr><td>Designs attached where relevant</td><td>Analytics events firing</td></tr>
+            <tr><td>Dependencies and technical contract agreed</td><td>Documentation and release notes updated</td></tr>
+            <tr><td>Small enough for one sprint</td><td>Product owner has accepted it</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="sub-title">Example story (illustrative)</h3>
+      <p class="story-example"><strong>As an account manager,</strong> I want to see each client’s monthly total, so that I can spot changes before our review meeting.</p>
+      <ul class="practice-list criteria-list">
+        <li>Given a client has complete data for the month, when I open the summary, then I see the total and the date it was last updated.</li>
+        <li>Given a client has no data for the month, when I open the summary, then I see “Not available” with the reason, and never “0”.</li>
+        <li>Given the data source is unavailable, when I open the summary, then I see a clear message and the last known figure, marked with its date.</li>
+        <li>Given I do not have permission for a client, when I search, then that client does not appear.</li>
+      </ul>
+
+      <h3 class="sub-title">Real examples</h3>
+      <ul class="practice-list">
+        <li><strong>Clearer requirements, less rework.</strong> At CloudNC I designed a hole-specification capability that reduced back-and-forth between requirements and implementation, improving the path from customer need to buildable requirement.</li>
+        <li><strong>Requirements with business rules at their core.</strong> At Curve Dental I led Roles &amp; Permissions, adding access control and separation-of-duties capabilities. It unlocked enterprise sales and contributed more than $2M in sales in its first quarter.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-rule">
+    <div class="wrap">
+      <span class="eyebrow">04 — Agile in practice</span>
+      <h2 class="section-title">Agile that keeps the team moving toward outcomes</h2>
+      <p>I have worked with five agile teams at CloudNC and six at Curve Dental. In practice:</p>
+      <ul class="practice-list">
+        <li><strong>Planning.</strong> A sprint goal tied to an outcome, not a list of tickets.</li>
+        <li><strong>Stand-up.</strong> For unblocking, not status reporting.</li>
+        <li><strong>Refinement.</strong> With the tech lead and designer, aiming for about two sprints of ready backlog. I split stories by slices of value, not by technical layer.</li>
+        <li><strong>Backlog.</strong> Ordered rather than just prioritised. The top is small and ready; the bottom is rough on purpose.</li>
+        <li><strong>Review.</strong> Demo working software to stakeholders and, where possible, customers.</li>
+        <li><strong>Retrospective.</strong> Agree one change and follow it through.</li>
+        <li><strong>Releases.</strong> MVPs and phased releases, with beta users recruited alongside Sales and Customer Success, and release messaging agreed with product marketing.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-rule">
+    <div class="wrap">
+      <span class="eyebrow">05 — Critical situations</span>
+      <h2 class="section-title">When something breaks, respond with speed and clarity</h2>
+      <p>When something breaks that customers depend on, such as a payroll run, speed and clear communication matter as much as the fix.</p>
+      <div class="table-scroll">
+        <table class="practice-table">
+          <thead><tr><th scope="col">When</th><th scope="col">What I do</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">First 15 minutes</th><td>Acknowledge it. Assess impact: who is affected, how many, and whether money, data or a legal deadline such as a payroll cut-off is at risk. Set severity, open one channel and name an incident lead.</td></tr>
+            <tr><th scope="row">First hour</th><td>Contain it: roll back, switch off the feature or put a manual workaround in place. Tell affected customers what we know, what we are doing and when they will next hear from us. For high severity, update at least hourly.</td></tr>
+            <tr><th scope="row">Resolution</th><td>Fix it, verify with the customer that the outcome is correct (for payroll, that people are paid the right amount on time), and close the loop.</td></tr>
+            <tr><th scope="row">Afterwards</th><td>A blameless review within days: root cause, what we will change, and prevention work in the backlog with owners and dates.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-rule">
+    <div class="wrap">
+      <span class="eyebrow">06 — Client &amp; partner conversations</span>
+      <h2 class="section-title">Own the conversation and the follow-through</h2>
+      <ul class="practice-list">
+        <li><strong>Own it.</strong> I stay the point of contact rather than handing the conversation over.</li>
+        <li><strong>Acknowledge and reassure.</strong> Show I understand the impact on their business.</li>
+        <li><strong>Offer a workaround now.</strong> Give something that helps today, and a plan for the full fix.</li>
+        <li><strong>Commit to an update.</strong> Be honest about what I don’t know and give a time for the next update.</li>
+        <li><strong>Involve experts without stepping back.</strong> Bring in specialists when needed, while I keep ownership of the relationship.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-rule">
+    <div class="wrap">
+      <span class="eyebrow">07 — Learning a new domain</span>
+      <h2 class="section-title">Start with the people, the work and the constraints</h2>
+      <p>I learned manufacturing by talking to machinists, programmers and manufacturing leaders, and dental practice software by working through clinical and billing workflows with customers. In a new sector, especially a regulated one, my first weeks look like this:</p>
+      <ul class="practice-list">
+        <li>Talk to users and to the people they serve, because the buyer, the user and the end client often want different things.</li>
+        <li>Map regulation, confidentiality and audit needs early with compliance and legal, and turn them into requirements.</li>
+        <li>Learn the vocabulary and shadow support to see real problems.</li>
+        <li>Write down my assumptions and test them before relying on them.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-links">
+    <a href="index.html#other-work">← Back to portfolio</a>
+    <a href="mailto:geoffrey.e.brennan@gmail.com">geoffrey.e.brennan@gmail.com</a>
+  </div>
+</footer>
+</body>
+</html>
