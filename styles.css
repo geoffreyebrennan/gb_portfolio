@@ -1,5 +1,5 @@
 :root {
-  --paper: #1F2023;
+  --paper: #17191D  ;
   --paper-alt: #2A2D32;
   --header: #17191D;
   --ink: #E7E9ED;
@@ -345,8 +345,14 @@ main > div > img {
 
 .profile-grid p:last-child { margin-bottom: 0; }
 
+.product-decisions-link {
+  grid-column: 2;
+  padding-top: 8px;
+}
+
 @media (max-width: 820px) {
   .profile-grid { grid-template-columns: 1fr; gap: 32px; }
+  .product-decisions-link { grid-column: 1; }
 }
 
 .specsheet {
@@ -800,7 +806,7 @@ h3.case-title {
 
 footer {
   background: var(--header);
-  color: var(--paper);
+  color: var(--ink);
   padding: 100px 0 48px;
 }
 
@@ -1270,7 +1276,7 @@ h2.footer-title em { font-style: italic; color: var(--ink); }
 
 .decision-page footer {
   background: var(--header);
-  color: var(--paper);
+  color: var(--ink);
   padding: 48px 0;
 }
 
